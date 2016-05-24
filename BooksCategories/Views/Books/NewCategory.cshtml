@@ -1,0 +1,17 @@
+﻿@model BooksCategories.Models.NewCategoryViewModel
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <form method="POST" action="/books/savecategory" data-categories="@Model.CategoryList">
+            <div class="form-group" id="stuff">
+                <input id="category-input" type="text" name="name" placeholder="Name" class="form-control" />
+            </div>
+            <button id="submit-button" class="btn btn-primary btn-block">Add Category</button>
+        </form>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/index.js"></script>
+}
+

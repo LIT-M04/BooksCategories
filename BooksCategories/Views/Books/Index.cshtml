@@ -1,0 +1,60 @@
+﻿@using BooksCategories.Data;
+@model BooksCategories.Models.IndexViewModel
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-success" role="alert">@Model.Message</div>
+}
+<div class="row" style="margin-top: 20px;">
+    <form action="/books/index">
+        <div class="col-md-4">
+            <select class="form-control" name="categoryId" id="my-select">
+                <option>Select a category</option>
+                @foreach (Category c in Model.Categories)
+                {
+                    if (Model.CategoryId != null && Model.CategoryId.Value == c.Id)
+                    {
+                        <option selected value="@c.Id">@c.Name</option>
+                    }
+                    else
+                    {
+                        <option value="@c.Id">@c.Name</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-primary">Filter</button>
+        </div>
+    </form>
+    <table class="table table-hover table-striped table-bordered">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year Published</th>
+            <th>Page Count</th>
+            <th>Category</th>
+        </tr>
+        @foreach (Book book in Model.Books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.YearPublished</td>
+                <td>@book.PageCount</td>
+                <td>@book.CategoryName</td>
+            </tr>
+        }
+    </table>
+</div>
+
+@section scripts
+{
+    <script>
+        $(function () {
+            $("#my-select").on('change', function() {
+                $("form").submit();
+            });
+        });
+    </script>
+}

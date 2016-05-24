@@ -1,0 +1,25 @@
+﻿@using BooksCategories.Data
+@model BooksCategories.Models.NewViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <form method="POST" action="/books/savebook">
+            <input type="text" name="title" placeholder="Title" class="form-control" />
+            <br />
+            <input type="text" name="author" placeholder="Author" class="form-control" />
+            <br />
+            <input type="text" name="yearPublished" placeholder="Year Published" class="form-control" />
+            <br />
+            <input type="text" name="pageCount" placeholder="Page Count" class="form-control" />
+            <br />
+            <select name="categoryId" class="form-control">
+                <option>Select a category</option>
+                @foreach (Category category in Model.Categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+            <button class="btn btn-primary btn-block">Add Book</button>
+        </form>
+    </div>
+</div>

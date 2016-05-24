@@ -1,0 +1,5 @@
+c:\users\alexfriedman\documents\visual studio 2013\Projects\BooksCategories\BooksCategories.Data\bin\Debug\BooksCategories.Data.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\BooksCategories\BooksCategories.Data\bin\Debug\BooksCategories.Data.pdb
+c:\users\alexfriedman\documents\visual studio 2013\Projects\BooksCategories\BooksCategories.Data\obj\Debug\BooksCategories.Data.csprojResolveAssemblyReference.cache
+c:\users\alexfriedman\documents\visual studio 2013\Projects\BooksCategories\BooksCategories.Data\obj\Debug\BooksCategories.Data.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\BooksCategories\BooksCategories.Data\obj\Debug\BooksCategories.Data.pdb
